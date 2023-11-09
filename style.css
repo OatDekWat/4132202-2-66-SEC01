@@ -1,0 +1,30 @@
+.top{
+    color: black;
+    text-align: center;
+    background-color: aqua;
+    padding: 50;
+    margin: 50;
+}
+.myname{
+    color: blueviolet;
+    background-color: aqua;
+    padding: 50;
+    margin: 50;
+    
+}
+tatle{
+    color:  purple;
+}
+
+#list{
+
+    color: aqua;
+}
+.red{
+    color: rgb(red, green, blue);
+}
+.card{
+    background-color: blue;
+    padding: 0px;
+    margin: 0px;
+}
