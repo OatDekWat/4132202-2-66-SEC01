@@ -1,25 +1,29 @@
+var num = 10;
+let name = "OatDekWat";
+age = 20;
 
-    var num = 10;
-    let name = "Maaa"
-    age = 250;
-    
-    fruit = ["apple","Mangkud","Lamyai"];
-    ojb = {name:"Somchai",age:200, tel:"123-443"};
+FRIUT = ["apple", "pineapple", "watermelon", "orange"];
+obj = { name: "THICHANON", age: 30, tel: "123456789" };
 
-    data = {adress:["23","Yai","Buriram",3100],name:"Somporn"};
+data = { address: ["69", "jira", "Buriram", 31110], name: "OAT" };
 
+var x = 1;
+y = 5;
 
-    console.log(fruit[1]);
-    console.log(ojb.tel)
-    console.log(data.adress[2]);
+console.log(FRIUT[3]);
+console.log(obj.name);
+console.log(data.address[2]);
 
-    document.getElementById("msg").innerHTML = data.adress[2];
+document.getElementById("smg").innerHTML = FRIUT[1];
 
-    let longTxt = data.name+" : " + fruit[0]; 
+let longTxt = data.name + " : " + FRIUT[0];
 
-    longTxt = `${data.name} :
-              ${fruit[1]}`;
-    $(function(){
-        $("#msg").html(longTxt);
-    }); //Jquery ready
+longTxt = `is ${y} = ${x} My name is ${obj.name}`;
 
+$(function () {
+    $("#smg").html(longTxt);
+});//jquery ready
+
+$(function () {
+    $(".smg1").html(data.address[1]);
+});

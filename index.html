@@ -1,91 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<!-- HTML form for entering grades -->
+<form id="gradeForm">
+    <label for="score">Enter your score:</label>
+    <input type="number" id="score0" name="score" min="0" max="100" required><br>
+    <label for="score">Enter your score:</label>
+    <input type="number" id="score1" name="score" min="0" max="100" required><br>
+    <button type="button" onclick="calculateGrade()">Calculate Grade</button>
+</form>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<script>
+function calculateGrade() {
+    // Get the score from the form
+    var score0 = document.getElementById("score0").value;
+    var score1 = document.getElementById("score1").value;
+    var score2 = score0 + score1;
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body background="red">
-    <div class="top">
-        <h1 class="head">
-            Hello World
-
-        </h1>
-        
-    </div>
-        <h1>นายธิชานนท์ ชูดี</h1>
-        <h2>650112418014</h2>
-
-    <p class="red">สาขาเทคโนโลยีสารสนเทศ <span>คณะวิทยาศาสตร์</span></p>
-    </body>
-    <br>
-    <strong>มหาลัยราดพัดบุรีรัมย์</strong> 
-
-    <ul id="list">
-        <li>4132202</li>
-        <li>เทคโนโลยีอินเตอร์เน็ต</li>
-    </ul>
-
-    <table border="1">
-        <thead>
-            <tr>
-                <th>ลำดับ</th>
-                <th>ชื่อ</th>
-            </tr>
-        </thead>    
-        <tbody>
-            <tr>
-                <td>1.</td>
-                <td>นายกูย</td>
-            </tr>
-            <tr>
-                <td>2.</td>
-                <td>นายสุย</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <form action="test.html" method="get">
-        <input type="text" name="txt"> <br>
-        <input type="checkbox">
-        <input type="checkbox"> <br>
-        <textarea name="" id="" cols="30" rows="10"></textarea> <br>
-        <input type="radio" name="choie" value="a" id="">
-        <input type="radio" name="choie" value="b" id=""> <br>
-        <select name="" id=""></select>
-            <option value="">เลือก</option>
-            <option value="">เสื้อ</option>
-            <option value="">กางเกง</option>
-        </select>
-        <br>
-        <button type="submit">SAVE</button>
-        <button type="reset">Cancle</button>
-   
-    </form>
-
-    <div class="container">
-        <div class="row"> 
-            <div class="col-10">left
-                <div class="row"> 
-                    <div class="col">1</div>
-                    <div class="col">2</div>
-                    <div class="col">3</div>
-                <div>
-            </div>
-         </div class="col-2">Right</div>
-    <div>
-
-    <div class="card" style="width: 18rem;">
-        <img src="https://ichef.bbci.co.uk/news/740/cpsprodpb/9970/live/9e4ab180-fd11-11ed-b2aa-9935735a579c.png" alt="">
-    </div>
-               
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    // Define the grading criteria
+    if (score2 >= 90) {
+        alert("Grade: A");
+    } else if (score2 >= 80) {
+        alert("Grade: B");
+    } else if (score2 >= 70) {
+        alert("Grade: C");
+    } else if (score2 >= 60) {
+        alert("Grade: D");
+    } else {
+        alert("Grade: F");
+    }
+}
+</script>
